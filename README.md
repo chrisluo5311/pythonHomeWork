@@ -1,4 +1,4 @@
-# python - HomeWork
+<h2><img src="https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif"  width="70" height="30"/> python - HomeWork <img src="https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif"  width="70" height="30"/></h2>
 
 <div>
  <img src="https://img.shields.io/github/languages/code-size/chrisluo5311/algo4chris" alt="chrisluo5311" />
@@ -23,7 +23,6 @@
 ### 安裝軟體對應版本:
 |  軟體  |  版本  |  
 |:------:|:--------:|
-|  SpringBoot  | `2.6.5`   | 
 |  Python  | `1.8`   | 
 
  

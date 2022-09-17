@@ -1,4 +1,12 @@
-<h2><img src="https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif"  width="70" height="30"/> PYTHON - HomeWork <img src="https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif"  width="70" height="30"/></h2>
+<h2>
+<img src="https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif"  width="70" height="30"/> 
+<img src="https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif"  width="70" height="30"/> 
+<img src="https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif"  width="70" height="30"/> 
+PYTHON - HomeWork 
+<img src="https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif"  width="70" height="30"/>
+<img src="https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif"  width="70" height="30"/> 
+<img src="https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif"  width="70" height="30"/> 
+</h2>
 
 <div>
  <img src="https://img.shields.io/github/languages/code-size/chrisluo5311/algo4chris" alt="chrisluo5311" />

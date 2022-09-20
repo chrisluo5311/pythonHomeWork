@@ -50,7 +50,7 @@ ID:42015632
 Average:0
 Total:0
 """
-from math import sqrt
+import math
 
 
 def export_student():
@@ -127,11 +127,11 @@ Example Output 5
 
 
 def quadratic_equation():
-    a = int(float(input("第一個數a:")))
-    b = int(float(input("第二個數b:")))
-    c = int(float(input("第三個數c:")))
-    x1 = ((-b) + sqrt(b * b - 4 * a * c)) / (2 * a)
-    x2 = ((-b) - sqrt(b * b - 4 * a * c)) / (2 * a)
+    a = int(float(input()))
+    b = int(float(input()))
+    c = int(float(input()))
+    x1 = ((-b) + math.sqrt(b * b - 4 * a * c)) / (2 * a)
+    x2 = ((-b) - math.sqrt(b * b - 4 * a * c)) / (2 * a)
     print("%.1f" % x1)
     print("%.1f" % x2)
 
@@ -240,3 +240,11 @@ def book_sum():
     c_sum = z * c_price
     total_price = a_sum + b_sum + c_sum
     print(total_price)
+
+
+# week1 main
+# if __name__ == '__main__':
+#     export_student()
+#     quadratic_equation()
+#     basic_math()
+#     book_sum()

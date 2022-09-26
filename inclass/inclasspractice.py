@@ -1,5 +1,6 @@
 from datetime import date
 from datetime import datetime
+import math
 
 
 def printMessage(name='Alan', age=18):
@@ -113,9 +114,71 @@ def read_file():
 def read_file02():
     # 用with來讀取並印出檔案內容。with結束時會自動關閉檔案，也就是不用另外寫f.close()。
     with open('E:/notepad筆記/北科/111_1北科大/程式設計/poem.txt', 'r') as f:
-        content = f.read() # 讀取檔案內容
-    print(content, end = '') # 印出時結尾不印new line
+        content = f.read()  # 讀取檔案內容
+    print(content, end='')  # 印出時結尾不印new line
 
+
+"""
+1.*args: 不定個數的參數加*
+2.sort: reverse=True will sort the list descending. Default is reverse=False
+"""
+
+
+def getMaxNum(*a):
+    print(type(a))
+    tmp = list(a)
+    print(tmp)
+    tmp.sort(reverse=True)
+    print(tmp[0])
+
+
+"""
+1. **kwargs: 如果想打包成字典(Dictionary)資料型態，則可以使用 ** 符號
+"""
+
+
+def getDict(**d):
+    print(d)
+    print(type(d))
+
+
+"""
+1. callback function
+"""
+
+
+def add(n1, n2, cb):
+    cb(n1 + n2)
+
+
+def handle1(result):
+    print("結果是", result)
+
+
+def handle2(result):
+    print("Result of Add is", result)
+
+
+def computeArea(cf, p):
+    return cf(p)
+
+
+def square(data):
+    return data * data
+
+
+def circle(data):
+    return math.pi * data * data
+
+
+def oe():
+    num = int(input("input a num:"))
+    if num == 100:
+        print("special number!!!")
+    elif num % 2 == 0:
+        print("是偶數")
+    else:
+        print("是奇數")
 
 
 if __name__ == '__main__':
@@ -129,4 +192,12 @@ if __name__ == '__main__':
     # exception_handle()
     # raise_keyword()
     # read_file()
-    read_file02()
+    # read_file02()
+    # getMaxNum(1, 2, 6, 9, 10, 55, 64, 1, 22, 3)
+    # getDict(name='chris', id='12345', age='5')
+    # test(handle)
+    # add(3,4,handle1) # 結果是 7
+    # add(5,6,handle2) # Result of Add is 11
+    # print(computeArea(square, 5))
+    # print(computeArea(circle, 5))
+    oe()

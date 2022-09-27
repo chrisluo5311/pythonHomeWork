@@ -122,8 +122,6 @@ def read_file02():
 1.*args: 不定個數的參數加*
 2.sort: reverse=True will sort the list descending. Default is reverse=False
 """
-
-
 def getMaxNum(*a):
     print(type(a))
     tmp = list(a)
@@ -135,8 +133,6 @@ def getMaxNum(*a):
 """
 1. **kwargs: 如果想打包成字典(Dictionary)資料型態，則可以使用 ** 符號
 """
-
-
 def getDict(**d):
     print(d)
     print(type(d))
@@ -145,28 +141,17 @@ def getDict(**d):
 """
 1. callback function
 """
-
-
 def add(n1, n2, cb):
     cb(n1 + n2)
-
-
 def handle1(result):
     print("結果是", result)
-
-
 def handle2(result):
     print("Result of Add is", result)
 
-
 def computeArea(cf, p):
     return cf(p)
-
-
 def square(data):
     return data * data
-
-
 def circle(data):
     return math.pi * data * data
 
@@ -179,7 +164,6 @@ def oe():
         print("是偶數")
     else:
         print("是奇數")
-
 
 
 def myScore():
@@ -202,6 +186,70 @@ def acOnAndOffv2(temp, wind, humidity):
         print('開冷氣')
 
 
+def findMiddle(a, b, c):
+    x = list((a, b, c))
+    x.sort()
+    return x[1]
+
+
+"""
+A、B、C三本書價格及折扣表如下，一顧客欲購買A:ｘ本、
+B:ｙ本、C:ｚ本（ｘ、ｙ、ｚ為使用者輸入），請計算需
+花費多少錢？
+  定價 1~10本 11~20本  21~30本  31本以上
+A 380  原價   打9折    打8.5折   打8折
+B 1200 原價   打9.5折  打8.5折   打8折
+C 180  原價   打8.5折  打8 折    打7折
+"""
+def book_discount():
+    x = int(input('A:'))
+    y = int(input('B:'))
+    z = int(input('C:'))
+    A_discounts = [0.8, 0.85, 0.9, 1, 0]
+    B_discounts = [0.8, 0.85, 0.95, 1, 0]
+    C_discounts = [0.7, 0.8, 0.85, 1, 0]
+    A_discount = getDiscount(x, A_discounts)
+    B_discount = getDiscount(y, B_discounts)
+    C_discount = getDiscount(z, C_discounts)
+    cost = x * 380 * A_discount + y * 1200 * B_discount + z * 180 * C_discount
+    print('The total cost is %d' % cost)
+
+def getDiscount(x, discounts):
+    discount = 0
+    if x >= 31:
+        discount = discounts[0]
+    elif x >= 21:
+        discount = discounts[1]
+    elif x >= 11:
+        discount = discounts[2]
+    elif x >= 1:
+        discount = discounts[3]
+    else:
+        discount = discounts[4]
+    return discount
+
+
+def scoreDivision():
+    score = int(input('輸入分數:'))
+    if score >= 90:
+        print('得 A')
+    elif score >= 80:
+        print('得 B')
+    elif score >= 70:
+        print('得 C')
+    elif score >= 60:
+        print('得 D')
+    else:
+        print('不及格')
+
+
+
+
+
+
+
+
+################################################################################################
 if __name__ == '__main__':
     # getListItem()
     # changeList()
@@ -223,4 +271,10 @@ if __name__ == '__main__':
     # print(computeArea(circle, 5))
     # oe()
     # acOnAndOff(31, 0, 86)
-    myScore()
+    # myScore()
+    # print(findMiddle(30, 10, 20))
+    # print(findMiddle(30,20,10))
+    # print(findMiddle(10,20,30))
+    # print(findMiddle(10,30,20))
+    # print(findMiddle(20,10,30))
+    book_discount()

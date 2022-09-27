@@ -55,6 +55,7 @@ PYTHON - HomeWork
 |  考點  |  圖  |  
 |:------:|:--------:|
 |  if...else流程圖  | <img src="https://github.com/chrisluo5311/pythonHomeWork/blob/master/pic/ifelse%E6%B5%81%E7%A8%8B%E5%9C%96.jpg"/>   |
-
+| 資訊系統開發流程 | 1.需求/問題的取得/理解 – 需求規格書<br>文字描述、圖形介面呈現<br>2.系統分析 - 系統規格書<br>測試案例設計、測試劇本/使用情境設計<br>3.系統設計<br>資料結構設計<br>程式流程設計/問題處理邏輯設計<br>4.程式碼撰寫<br>程式語法正確性 (筆試/上機測驗)<br>程式邏輯正確性 (筆試/上機測驗)<br>5.系統驗證<br>靜態分析 – 程式碼檢視 – 人工追蹤程式運作 (筆試)<br>動態測試 – 測試案例、測試程式執行 (上機測驗)<br> |
+| 三種結構 | 1. sequential 依序<br>2. branch 判斷<br>3. iteration 迴圈 |
 
 

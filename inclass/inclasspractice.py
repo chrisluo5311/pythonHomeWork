@@ -181,6 +181,22 @@ def oe():
         print("是奇數")
 
 
+def acOnAndOff(temp, wind, humidity):
+    if temp > 30 and wind == 0 and humidity > 85:
+        print('開冷氣')
+
+
+def myScore():
+    print("Hello~")
+    score = int(input('輸入分數:'))
+    if (score > 100) or (score < 0):
+        print('成績輸入錯誤')
+    elif score >= 60:
+        print('恭喜你及格')
+    else:
+        print('不及格，要加油')
+
+
 if __name__ == '__main__':
     # getListItem()
     # changeList()
@@ -200,4 +216,6 @@ if __name__ == '__main__':
     # add(5,6,handle2) # Result of Add is 11
     # print(computeArea(square, 5))
     # print(computeArea(circle, 5))
-    oe()
+    # oe()
+    # acOnAndOff(31, 0, 86)
+    myScore()

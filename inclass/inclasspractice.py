@@ -181,10 +181,6 @@ def oe():
         print("是奇數")
 
 
-def acOnAndOff(temp, wind, humidity):
-    if temp > 30 and wind == 0 and humidity > 85:
-        print('開冷氣')
-
 
 def myScore():
     print("Hello~")
@@ -195,6 +191,15 @@ def myScore():
         print('恭喜你及格')
     else:
         print('不及格，要加油')
+
+
+"""
+若溫度(temperature )高於30而且沒有風wind=0，或濕度
+(humidity)大於85，印出'開冷氣'
+"""
+def acOnAndOffv2(temp, wind, humidity):
+    if (temp > 30 and wind == 0) or humidity > 85:
+        print('開冷氣')
 
 
 if __name__ == '__main__':

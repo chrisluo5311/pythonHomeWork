@@ -1,7 +1,6 @@
 from datetime import date
 from datetime import datetime
 import math
-import time
 
 
 def printMessage(name='Alan', age=18):
@@ -123,8 +122,6 @@ def read_file02():
 1.*args: 不定個數的參數加*
 2.sort: reverse=True will sort the list descending. Default is reverse=False
 """
-
-
 def getMaxNum(*a):
     print(type(a))
     tmp = list(a)
@@ -136,8 +133,6 @@ def getMaxNum(*a):
 """
 1. **kwargs: 如果想打包成字典(Dictionary)資料型態，則可以使用 ** 符號
 """
-
-
 def getDict(**d):
     print(d)
     print(type(d))
@@ -146,28 +141,17 @@ def getDict(**d):
 """
 1. callback function
 """
-
-
 def add(n1, n2, cb):
     cb(n1 + n2)
-
-
 def handle1(result):
     print("結果是", result)
-
-
 def handle2(result):
     print("Result of Add is", result)
 
-
 def computeArea(cf, p):
     return cf(p)
-
-
 def square(data):
     return data * data
-
-
 def circle(data):
     return math.pi * data * data
 
@@ -197,8 +181,6 @@ def myScore():
 若溫度(temperature )高於30而且沒有風wind=0，或濕度
 (humidity)大於85，印出'開冷氣'
 """
-
-
 def acOnAndOffv2(temp, wind, humidity):
     if (temp > 30 and wind == 0) or humidity > 85:
         print('開冷氣')
@@ -219,8 +201,6 @@ A 380  原價   打9折    打8.5折   打8折
 B 1200 原價   打9.5折  打8.5折   打8折
 C 180  原價   打8.5折  打8 折    打7折
 """
-
-
 def book_discount():
     x = int(input('A:'))
     y = int(input('B:'))
@@ -233,7 +213,6 @@ def book_discount():
     C_discount = getDiscount(z, C_discounts)
     cost = x * 380 * A_discount + y * 1200 * B_discount + z * 180 * C_discount
     print('The total cost is %d' % cost)
-
 
 def getDiscount(x, discounts):
     discount = 0
@@ -264,48 +243,10 @@ def scoreDivision():
         print('不及格')
 
 
-def print_ex():
-    print("---RUNOOB EXAMPLE ： Loading 效果---")
-    print("Loading", end="")
-    for i in range(20):
-        print(".", end='', flush=True)
-        time.sleep(0.5)
 
 
-def forOps():
-    myString = "ATCgATAgcTCGaTCG"
-    for index in myString:
-        if index.isupper():
-            print(index, end=" ")
 
 
-def forOps2():
-    i = 1
-    myList = ["asm", "C", "python", "C++", "Java", "iOS", "Ruby", "perl", "delphi"]
-    for index in myList:
-        if index == "python":
-            print(i, index)
-        elif index == "Java":
-            print(i, index)
-        elif i % 3 != 0:
-            print(i, index)
-            i = i + 1
-        else:
-            i = i + 1
-
-
-def getSum(num):
-    sumVal = 0
-    for i in range(num+1):
-        sumVal += i
-    return sumVal
-
-
-def getSum3Times(m,n,step):
-    sumVal = 0
-    for i in range(m,n+1,step):
-        sumVal += i
-    return sumVal
 
 
 ################################################################################################
@@ -336,10 +277,4 @@ if __name__ == '__main__':
     # print(findMiddle(10,20,30))
     # print(findMiddle(10,30,20))
     # print(findMiddle(20,10,30))
-    # book_discount()
-    # print_ex()
-    # forOps()
-    # forOps2()
-    # print(getSum(3))
-    print(getSum3Times(3,12,3))
-
+    book_discount()

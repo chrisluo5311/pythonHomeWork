@@ -9,8 +9,8 @@ PYTHON - HomeWork
 </h2>
 
 <div>
- <img src="https://img.shields.io/github/languages/code-size/chrisluo5311/algo4chris" alt="chrisluo5311" />
- <img src="https://img.shields.io/github/commit-activity/m/chrisluo5311/algo4chris" alt="chrisluo5311" />
+ <img src="https://img.shields.io/github/languages/code-size/chrisluo5311/pythonHomeWork" alt="chrisluo5311" />
+ <img src="https://img.shields.io/github/commit-activity/m/chrisluo5311/pythonHomeWork" alt="chrisluo5311" />
  </div> 
  
  ---

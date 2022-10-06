@@ -52,9 +52,9 @@ def changeList():
     print(thislist)
     thislist = ["apple", "banana", "cherry"]
     thislist[1:2] = ["blackcurrant", "watermelon"]
+    print(thislist)
     thislist2 = ["apple", "banana", "cherry"]
     thislist2[1:3] = ["watermelon"]
-    print(thislist)
     print(thislist2)
     thislist3 = ["apple", "banana", "cherry"]
     thislist3.insert(2, "watermelon")
@@ -301,11 +301,112 @@ def getSum(num):
     return sumVal
 
 
+# 會考執行順序
 def getSum3Times(m, n, step):
     sumVal = 0
     for i in range(m, n + 1, step):
         sumVal += i
-    return sumVal
+    return sumVal, sumVal
+
+
+def forOps3():
+    i = 1
+    myList = ["asm", "python", "C++", "Java", "iOS", "perl", "C#"]
+    for index in myList:
+        if (index == "Java"):
+            print(i, index, end=', ')
+        elif (index == "python"):
+            print(i, index, end=', ')
+        elif (i % 2 != 0):
+            print(i, index, end=', ')
+            i = i + 1
+        else:
+            i = i + 1
+
+
+def getEq(x1, y1, x2, y2):
+    m1 = y1 - y2
+    m2 = x1 - x2
+    b1 = x2 * y1 - x1 * y2
+    b2 = x2 - x1
+    return m1, m2, b1, b2
+
+
+def equation(x1, y1, x2, y2):  # 1
+    m = b = m1 = m2 = b1 = b2 = 0  # 2
+    if (x1 == x2) and (y1 == y2):
+        print('ERROR')  # 3
+    if (x1 == x2):
+        print('x=%d' % x1, end='')  # 4
+    elif (y1 == y2):
+        print('y=%d' % y1, end='')  # 5
+    else:  # 6
+        m1, m2, b1, b2 = getEq(x1, y1, x2, y2)  # 7
+        print('y=', end='')  # 8
+    if (m1 < 0) and (m2 < 0):  # 9
+        m1 = -m1  # 10
+        m2 = -m2  # 11
+    if m1 == m2:
+        print('', end='')  # 12
+    elif m1 == (-m2):
+        print('-', end='')  # ---(5) #13
+    elif m1 % m2 == 0:  # 14
+        m = m1 / m2;  # 15
+        print('%d' % m, end='')  # 16
+    else:
+        print('%d/%d' % (m1, m2), end='')  # 17
+    print('x', end='')  # 18
+    if (b1 != 0):  # 19
+        if (b1 * b2 > 0):
+            print('+', end='')  # -(7) #20
+    if (b1 % b2 == 0):
+        print('%d' % (b1 / b2), end='')  # 21
+    else:
+        print('%d/%d' % (b1, b2), end='')  # 22
+    print('')  # 23
+
+
+def drawPyramid():
+    for x in range(0, 10, 3):
+        print(int(x / 3) * '#', end='')
+        getNum(x)
+        print('')
+
+
+def getNum(x):
+    for i in range(x, 10, 3):
+        print(i, end='')
+
+
+def test01():
+    list = ['a', 'b', 'c', 'd', 'e', 'f']
+    index = [3, 1, 2, 4, 5]
+    i = 9
+    for x in list:
+        if i > len(list):
+            print(list[index[7 - i]])
+        i -= 1
+
+
+"""
+執行順序:
+1, 2,3,4,5,6,4,5,6,4,5,6,4,5,4,5,6
+
+"""
+
+
+def forloop_str():  # 1
+    myString = "ATCgATAgcTCGaTCG"  # 2
+    s = 0  # 3
+    for index in myString:  # 4
+        if index.isupper():  # 5
+            s += 1  # 6
+    print(s)  # 7
+
+
+
+
+
 
 
 ################################################################################################
@@ -341,4 +442,18 @@ if __name__ == '__main__':
     # forOps()
     # forOps2()
     # print(getSum(3))
-    print(getSum3Times(3, 12, 3))
+    # forOps3()
+    # 考順序
+    # print(sumVal)
+    # a = b = 0
+    # a,b = getSum3Times(3, 12, 3)
+    # print(a)
+    # print(b)
+
+    # equation(1,0,0,1) #24
+    # equation(1,1,2,4) #25
+    # equation(2,3,4,5) #26
+    # equation(0,1,3,3)
+    # drawPyramid()
+    # test01()
+    forloop_str()

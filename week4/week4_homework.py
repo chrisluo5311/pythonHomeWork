@@ -252,21 +252,16 @@ def count_longest(x):
 
 """
 15 - BMI
-
 請設計計算BMI的程式，判斷A, B 兩個人，誰的BMI比較大
-
 BMI值計算公式: BMI = 體重(公斤) / 身高^2(公尺^2)，例如：一個52公斤的人，身高是155公分，則BMI為 : 52(公斤)/1.55^2 ( 公尺^2 )= 21.6。
 正常範圍BMI 為 18.5～24 (含18.5與24)。
 當BMI太大，輸出 Hi {name}, Your BMI: {xxx} too HIGH.
 當BMI太小，輸出 Hi {name}, Your BMI: {xxx} too LOW.
 在正常範圍，輸出 Hi {name}, Your BMI: {xxx}.
-
 若A比B重，輸出 {A}’s BMI is larger than {B}.
 若B比A重，輸出 {B}’s BMI is larger than {A}.
 ★ 不會有雙方BMI相同的狀況
-
 BMI輸出，四捨五入到小數點後第二位 (可用%.2f)。
-
 ---------------------------------------------------
 
 輸入說明 :

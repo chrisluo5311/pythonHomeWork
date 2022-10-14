@@ -52,6 +52,9 @@ def myPyramid(n):
         print(' '*(n-i) + (i*2+1)*'*')
 
 
+
+
+
 if __name__ == '__main__':
     # main1()
     # main02()

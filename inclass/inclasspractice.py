@@ -3,24 +3,24 @@ from datetime import datetime
 import math
 import time
 
-
+"""
+參數可以預設
+"""
 def printMessage(name='Alan', age=18):
     print('Hello:' + name)
     print('your age is :' + str(age))
 
 
-# 直接執行
+"""
+直接執行
+"""
 # if __name__ == '__main__':
-#     name = input('your name:')
-#     age = int(input('your age:'))
-#     printMessage(name, 16)
-
-# if __name__ == '__main__':
-#     print('Direct main')
-# else:
-#     print('import __name__ is :' + __name__)
 
 
+"""
+list的使用:
+    list(("apple", "banana", "cherry"))  # note the double round-brackets
+"""
 def printList():
     thislist = ["apple", "banana", "cherry", "apple", "cherry"]
     print(thislist)
@@ -32,7 +32,13 @@ def printList():
     thislist = list(("apple", "banana", "cherry"))  # note the double round-brackets
     print(thislist)
 
-
+"""
+1. 起始為0
+2. [2:5]不包含5
+3. [-4:-1]不包含-1
+4. 負號起始為-1
+5. 結尾皆不包含
+"""
 def getListItem():
     thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
     print(thislist[-1])
@@ -45,7 +51,9 @@ def getListItem():
     if "apple" in thislist5:
         print("Yes, 'apple' is in the fruits list")
 
-
+"""
+list 新增與插入
+"""
 def changeList():
     thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
     thislist[1:3] = ["blackcurrant", "watermelon"]
@@ -60,27 +68,24 @@ def changeList():
     thislist3.insert(2, "watermelon")
     print(thislist3)
 
-
-def get_area(length, width=4, height=5):
-    return length * width * height
-
-
-def countAge(num, birthyear):
-    num = ((num * 2) + 5) * 50 + 1770
-    finaleAge = num - birthyear
-    return finaleAge
-
-
+"""
+輸入五個數，取第三個數
+"""
 def integer_pick(num):
     num = int((num / 100) % 10)
     return num
 
-
+"""
+出生到現在有幾天
+"""
 def datetime_count(born):
     age = datetime.date.today() - born
     return age.days
 
 
+"""
+try except
+"""
 def exception_handle():
     try:
         # 10/0
@@ -92,7 +97,9 @@ def exception_handle():
     finally:
         print('finally 區塊')
 
-
+"""
+raise 的用法
+"""
 def raise_keyword():
     # x = -1
     # if x < 0:
@@ -101,19 +108,24 @@ def raise_keyword():
     if not type(x) is int:
         raise TypeError("Only integers are allowed")
 
-
+"""
+讀入檔案
+1. open()
+2. readlines()
+3. close()
+"""
 def read_file():
     f = open('E:/notepad筆記/北科/111_1北科大/程式設計/poem.txt', 'r')  # 開啟並讀取檔案 'r'代表讀取模式
     lines = f.readlines()  # 讀取檔案內容的每一行文字為陣列
-
     for line in lines:
         print(line, end='')  # 印出時結尾不印new line
-
     f.close()
 
-
+"""
+用with來讀取並印出檔案內容。
+with結束時會自動關閉檔案，也就是不用另外寫f.close()。
+"""
 def read_file02():
-    # 用with來讀取並印出檔案內容。with結束時會自動關閉檔案，也就是不用另外寫f.close()。
     with open('E:/notepad筆記/北科/111_1北科大/程式設計/poem.txt', 'r') as f:
         content = f.read()  # 讀取檔案內容
     print(content, end='')  # 印出時結尾不印new line
@@ -123,8 +135,6 @@ def read_file02():
 1.*args: 不定個數的參數加*
 2.sort: reverse=True will sort the list descending. Default is reverse=False
 """
-
-
 def getMaxNum(*a):
     print(type(a))
     tmp = list(a)
@@ -136,8 +146,6 @@ def getMaxNum(*a):
 """
 1. **kwargs: 如果想打包成字典(Dictionary)資料型態，則可以使用 ** 符號
 """
-
-
 def getDict(**d):
     print(d)
     print(type(d))
@@ -146,8 +154,6 @@ def getDict(**d):
 """
 1. callback function
 """
-
-
 def add(n1, n2, cb):
     cb(n1 + n2)
 
@@ -159,7 +165,9 @@ def handle1(result):
 def handle2(result):
     print("Result of Add is", result)
 
-
+"""
+1. callback function: 算面積
+"""
 def computeArea(cf, p):
     return cf(p)
 
@@ -171,7 +179,9 @@ def square(data):
 def circle(data):
     return math.pi * data * data
 
-
+"""
+1. if...elif...else的使用
+"""
 def oe():
     num = int(input("input a num:"))
     if num == 100:
@@ -181,7 +191,9 @@ def oe():
     else:
         print("是奇數")
 
-
+"""
+1. if...elif...else的使用
+"""
 def myScore():
     print("Hello~")
     score = int(input('輸入分數:'))
@@ -197,13 +209,13 @@ def myScore():
 若溫度(temperature )高於30而且沒有風wind=0，或濕度
 (humidity)大於85，印出'開冷氣'
 """
-
-
 def acOnAndOffv2(temp, wind, humidity):
     if (temp > 30 and wind == 0) or humidity > 85:
         print('開冷氣')
 
-
+"""
+三個數，找出中間的數
+"""
 def findMiddle(a, b, c):
     x = list((a, b, c))
     x.sort()
@@ -219,8 +231,6 @@ A 380  原價   打9折    打8.5折   打8折
 B 1200 原價   打9.5折  打8.5折   打8折
 C 180  原價   打8.5折  打8 折    打7折
 """
-
-
 def book_discount():
     x = int(input('A:'))
     y = int(input('B:'))
@@ -249,7 +259,9 @@ def getDiscount(x, discounts):
         discount = discounts[4]
     return discount
 
-
+"""
+分數分級
+"""
 def scoreDivision():
     score = int(input('輸入分數:'))
     if score >= 90:
@@ -263,7 +275,9 @@ def scoreDivision():
     else:
         print('不及格')
 
-
+"""
+print flush功能
+"""
 def print_ex():
     print("---RUNOOB EXAMPLE ： Loading 效果---")
     print("Loading", end="")
@@ -271,14 +285,18 @@ def print_ex():
         print(".", end='', flush=True)
         time.sleep(0.5)
 
-
+"""
+for loop
+"""
 def forOps():
     myString = "ATCgATAgcTCGaTCG"
     for index in myString:
         if index.isupper():
             print(index, end=" ")
 
-
+"""
+for loop
+"""
 def forOps2():
     i = 1
     myList = ["asm", "C", "python", "C++", "Java", "iOS", "Ruby", "perl", "delphi"]
@@ -413,8 +431,6 @@ def forloop_str():  # 1
 if __name__ == '__main__':
     # getListItem()
     # changeList()
-    # print("area is: " + str(get_area(3)))
-    # print(countAge(1, 1997))
     # print(integer_pick(67859))
     # datetime_count(x)
     # print(datetime.date.today())
@@ -424,7 +440,7 @@ if __name__ == '__main__':
     # read_file02()
     # getMaxNum(1, 2, 6, 9, 10, 55, 64, 1, 22, 3)
     # getDict(name='chris', id='12345', age='5')
-    # test(handle)
+    # unitest(handle)
     # add(3,4,handle1) # 結果是 7
     # add(5,6,handle2) # Result of Add is 11
     # print(computeArea(square, 5))

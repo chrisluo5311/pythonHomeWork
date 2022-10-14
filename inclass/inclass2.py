@@ -52,14 +52,20 @@ def myPyramid(n):
         print(' '*(n-i) + (i*2+1)*'*')
 
 
-
+def printStar(n):
+    print("*"*n)
 
 
 if __name__ == '__main__':
     # main1()
     # main02()
     # myPrint(5)
-    myTriangle(4)
+    # myTriangle(4)
     # myDownTriangle(5)
     # myPrintS()
     # myPyramid(5)
+    printStar(2)
+
+
+
+

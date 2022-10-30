@@ -204,17 +204,19 @@ def myButterfly():
             if i <= middleLine:
                 eachSideStar = int(2*(i+1)-1)
                 underLineNum = int(n * 2 - (2*(i+1)-1) * 2)
-                print(eachSideStar*'*',end='')
-                print(underLineNum*'_',end='')
-                print(eachSideStar * '*', end='')
-                print()
+                printMyStar(eachSideStar, underLineNum)
             else:
                 eachStar = int(2*((n-(i+1))+1)-1)
                 underLine = int(n * 2 - (2*((n-(i+1))+1)-1) * 2)
-                print(eachStar*'*',end='')
-                print(underLine*'_',end='')
-                print(eachStar * '*', end='')
-                print()
+                printMyStar(eachStar,underLine)
+
+def printMyStar(star_num,underline_num):
+    print(star_num * '*', end='')
+    print(underline_num * '_', end='')
+    print(star_num * '*', end='')
+    print()
+
+
 """
 23. 閏年判斷
 閏年(Leap year)以下規則:

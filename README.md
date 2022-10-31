@@ -73,7 +73,8 @@ PYTHON - HomeWork
 |     測試程式     | <img src="https://github.com/chrisluo5311/pythonHomeWork/blob/master/pic/unitest.jpg" width="700" height="500"/> |
 
 
-### 單元測試成果圖片:
-|   周   | 圖   |  
-|:-----:|:----|
-| week5 | <img src="https://github.com/chrisluo5311/pythonHomeWork/blob/master/pic/unitest_coverage.jpg">   |  
+### 單元測試成果圖片、考點:
+|   周   | 圖                                                                                                                                                                                                                                                                                                                                                         |  
+|:-----:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| week5 | <img src="https://github.com/chrisluo5311/pythonHomeWork/blob/master/pic/unitest_coverage.jpg">                                                                                                                                                                                                                                                           |  
+|  考點   | 1.測試程式的定義:測試程式正確性，找出程式錯誤<br/>2.Test Case定義:滿足問題/需求描述的各種條件/情境的輸入與預期輸出。<br/>3.單元測試的步驟:設計測試案例、撰寫測試(驅動)程式、執行測試<br/>4.branch coverage vs instruction coverage:<br/>branch coverage: 程式中的每個分支T/F是否都有覆蓋<br/>instruction coverage: 程式中的每個指令是否覆蓋<br/>5.assertEquals:比較執行結果與期望結果是否相等。<br/>6.coverage 套件中，綠色、黃色、紅色各代表意思:綠色: 指令有被充分測試到。黃色:條件判斷T/F指令，部分被測試到。紅色:指令沒被測試到 |

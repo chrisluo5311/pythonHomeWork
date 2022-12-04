@@ -92,7 +92,80 @@ def binarySearch(data, left, right, key):
         left = mid + 1
     return binarySearch(data, left, right, key)
 
+def FracMix(x):
+    num, dem = x.split('/')
+    i = int(int(num)/int(dem))
+    dem = Fraction(int(num)%int(dem), int(dem))
+    return str(i)+'('+str(dem) + ')'
 
+def turnFour(n):
+    ans = [0,0,0,0]
+    for i in range(3,-1,-1):
+        if n - (2 ** i) >= 0:
+            n -= (2**i)
+            ans[4-(i+1)] = 1
+            continue
+    print(*ans,sep='')
+
+def convertTen(s):
+    sumNum = 0
+    for i in range(len(s),0,-1):
+        print(s[i-1:i])
+        if s[i-1:i] == '1':
+            sumNum += 2**(len(s)-i)
+    return sumNum
+
+from fractions import Fraction
 if __name__ == '__main__':
     # permutation1('abc')
-    permutationComprehension('abc')
+    # permutationComprehension('abc')
+    # print(int(2.5//1))
+    # x = int(2.5//1)
+    # y = 2.5%1
+    # print(Fraction(2.5))
+    # print(str(x)+"(",end='')
+    # print(str(Fraction(0.5))+")")
+
+    a1 = Fraction(1, 2) + Fraction(4, 2)
+    # print(a1)
+    fList = str(a1).split('/')
+    # print(fList[0])
+    # print(fList[1])
+    # print(FracMix('-5/2'))
+    n = '27/43)'
+    # print(n[:len(n)-1])
+
+    # print(601% abs(-115))
+
+    s = '0010'
+    # print(s[1:2])
+    # print(s[2:3])
+
+    # turnFour(4)
+
+    # convertTen('00001010')
+
+    ctList = ['A F G ','A E Z ']
+    # x = len(min(ctList,key=len))
+    # for i in ctList:
+    #     if len(i) == x:
+    #         print(i)
+
+    newlist = [2,3,6,7]
+    right = sorted([x for x in newlist if x % 2 == 0],reverse=True)
+    # print(right)
+
+
+
+    p1 = '99'
+    p2 = '1'
+    firstp = p1[:]
+
+    # print(2 ** 11)
+
+    cargoList = []
+    tmpList = [1]
+    cargoList.append(tmpList)
+    print(cargoList)
+
+

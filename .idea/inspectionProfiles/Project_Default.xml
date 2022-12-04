@@ -61,6 +61,7 @@
         <list>
           <option value="int.*" />
           <option value="range.*" />
+          <option value="dict.get" />
         </list>
       </option>
     </inspection_tool>
